@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>南京之行</title>
+    <link rel="icon" href="../images4/头像.jpg">
+    <link rel="stylesheet" href="../css/css7.css">
+</head>
+
+<body>
+    <div id="pic">
+        <img src="../images4/和平.jpg" alt=""> 
+        <ul>
+        </ul>
+
+    </div>
+    <script>
+        var pic = document.getElementById('pic');
+        var imgs = pic.getElementsByTagName('img')[0];
+        var lis = pic.getElementsByTagName('li')[0];
+        var uls = pic.getElementsByTagName('ul')[0];
+        var lis = uls.getElementsByTagName('li');
+        //找到页面中的li元素,li元素是往里面塞进去的
+        // 准备数据
+        var arrUrl = ['../images4/和平.jpg','../images4/博物馆.jpeg','../images4/博物馆建筑.jpeg', '../images4/金凤冠.jpeg', '../images4/羊骨.jpeg','../images4/绿瓷.jpeg', '../images4/瓷瓶.jpeg'];
+        var num = 0;
+        //有数组的地方一般都有数字，因为图片地址配合数字就能找到文字描述
+
+        // -----------------------添加定时器--------------------------------------------
+        var timer = null;//设置定时器开关
+        function autoPlay() {//定时器用函数包围起来
+            timer = setInterval(function () {
+                num++;//数值加1
+                num %= arrUrl.length;//以数组长度来循环切换
+                fnTab();
+            }, 1000);
+        }
+        //autoPlay();//函数直接调用，打开页面就开始轮播；(这行与下一行只能存在一个)
+        setTimeout(autoPlay, 1000);//打开页面1秒钟之后再开始轮播
+        // 鼠标移入图片上面，让定时器关闭；
+        pic.onmouseover = function () {
+            clearInterval(timer);
+        };
+        // 鼠标移出图片定时器开启
+        pic.onmouseout = autoPlay;//autoPlay后面不能添加括号
+
+        // ----------------------定时器结束--------------------------------------------
+
+        // 插入li标签
+        for (var i = 0; i < arrUrl.length; i++) {
+            uls.innerHTML += '<li></li>';//往Ul里添加li就要写成+=，如果是改写就直接写成等号 
+        }
+
+        // 初始化，要先插入标签再初始化，顺序不要颠倒，否则会出错
+        function fnTab() {
+            imgs.src = arrUrl[num];//显示第一张图片
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].className = '';
+            }
+            lis[num].className = 'active';//给当前的li添加类名  
+        }
+        fnTab();
+
+        // 给li添加点击事件，循环li
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].index = i;//自定义属性又叫索引值
+            lis[i].onclick = function () {
+                num = this.index;
+                fnTab();
+            };
+        }
+
+    </script>
+</body>
+
+</html>

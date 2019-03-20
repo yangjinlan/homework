@@ -1,0 +1,257 @@
+body{
+	font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.carousel-indicators .active{
+    background-color: #2dae36;
+}
+.mx_center{
+	margin-left: auto;
+	margin-right: auto;
+}
+.mx_width{
+	padding-left: 10%;
+	padding-right: 10%;
+	box-sizing: border-box;
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.mx_navigation{
+    width: 100%;
+}
+.mx_navigation .navbar{
+	border-radius: 0;
+	margin-bottom: 0;
+	min-height: 80px;
+}
+.mx_navigation .navbar-default{
+	background: none;
+	border: none;
+}
+.mx_navigation .navbar-default .navbar-toggle .icon-bar{
+	background: #2dae36;
+}
+.mx_navigation .navbar-brand{
+	width: 280px;
+	background: url(../images3/logo0.png) center no-repeat;
+	height: 80px;
+	padding: 8px;
+}
+.mx_navigation .navbar-brand img{
+	height:100%;
+}
+.mx_navigation .collapse{
+	line-height: 50px;
+}
+.mx_navigation .navbar-toggle{
+	margin-top: 22px;
+	border-color: #2dae36;
+}
+.mx_navigation .navbar-toggle:hover{
+	border-color: white;
+	background-color:#2dae36;
+}
+.mx_navigation .navbar-collapse{
+	padding:0;
+}
+.mx_navigation .navbar-default .navbar-toggle:hover .icon-bar{
+	background-color:white;
+}
+.mx_navigation .navbar-nav{
+	margin-right: -60px;
+}
+.mx_navigation .navbar-nav>li>a{
+	line-height: 50px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.mx_navigation .navbar-nav>li:hover>a{
+	color:#2dae36;
+	border-bottom: 2px solid #2dae36;
+}
+.mx_navigation .navbar-nav .select>a{
+	color:#2dae36 !important;
+	border-bottom: 2px solid #2dae36 !important;
+}
+.company{
+    text-align:center;
+    width: 100%;
+    margin-top: 40px;
+}
+.row{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 30px;
+	/* background-color: aquamarine; */
+}
+.row .col-md-3  img{
+    width: 100px;
+	height: 100px;
+	margin-left: 88px;
+}
+.row .col-md-3 h3{
+	color: #2dae36;
+	margin-left: 114px;
+}
+.row .col-md-3 p{
+	margin-left: 56px;
+}
+.row .col-md-3 .pingzhi{
+	margin-left: 88px;
+}
+.chanping{
+	max-width: 100%;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 40px;
+	/* background-color: aquamarine; */
+	
+}
+.chanping button{
+	background:#2DAE36;
+	font-size: 20px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding-left:15px;
+	padding-right: 15px;
+	margin-bottom: 0;
+}
+ .chanping hr{
+	 border:0.5px solid #2DAE36;
+	 margin-top: 0px;
+} 
+.pictures{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	max-width: 100%;
+}
+.pictures img{
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+.end{
+	margin-top: 40px;
+	max-width: 100%;
+	width: 100%;
+	height: 100px;
+	background-color: #DDDDDD;
+	margin-left: auto;
+	margin-right: auto;
+}
+.end-container{
+	max-width: 100%;
+	width: 1000px;
+	height: 100px;
+	/* background-color:rebeccapurple; */
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+.logo{
+	position: absolute;
+	width: 90px;
+	height: 73px;
+	margin-top: 20px;
+}
+.logo img{
+	padding: 0;
+	max-width: 100%;
+	width: 90px;
+	height: 73px;
+	
+}
+.changepage{
+	width: 600px;
+	max-width: 100%;
+	position: absolute;
+	margin-left: 222px;
+	margin-top: 39px;
+	text-align: center;
+}
+.changepage div a{
+	text-decoration: none;
+	color: rgb(163, 161, 161);
+}
+.changepage div a:hover{
+	color: #2DAE36;
+}
+.copyright{
+	font-size: 10px;
+	color: rgb(163, 161, 161);
+}
+.list ul li{
+  list-style: none;
+  color: rgb(163, 161, 161);
+  font-size: 8px;
+  margin-bottom: 10px;
+  
+}
+.list{
+	max-width: 100%;
+	width: 131px;
+	left: 20px;
+	position: absolute;
+	margin-top: -63px;
+	margin-left: 600px;
+}
+.list ul li img{
+	width: 15px;
+	height: 15px;
+	
+}
+.aboutus img{
+	max-width: 100%;
+}
+.location{
+	width: 1200px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	position: relative;
+}
+.map{
+	max-width: 100%;
+	width: 578px;
+	height: 400px;
+	position: absolute;
+	margin-top: 20px;
+}
+.map img{
+	max-width: 100%;
+	width: 578px;
+	height: 400px;
+}
+.describe{
+	width: 600px;
+	height: 300px;
+	max-width: 100%;
+	margin-top: 20px;
+	font-size: 14px;
+    line-height: 1.42857143;
+	color: #333;
+}
+.describe p{
+	
+	text-indent: 2em;
+margin-bottom: 20px;
+}
+.describe p span{
+
+	color: #2DAE36;
+}
+body{
+	max-width: 100%;
+}
