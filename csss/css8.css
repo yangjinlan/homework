@@ -1,0 +1,36 @@
+*{margin:0;padding: 0}
+body {background-color: #e9dfe5; position: relative;}
+.container{
+   position: relative;
+    width: 1300px;
+    height: 650px;
+    margin-left: 20px;
+    top: 40px;
+}
+.content{
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: 200px;
+  
+}
+.content p{
+     text-indent: 35px;
+}
+.content span{
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#pic {
+    width: 600px;
+    position: absolute;
+    z-index: 15;
+    margin-left: 800px;
+  
+}
+#pic img {
+    width: 600px;
+    height: 650px;
+}

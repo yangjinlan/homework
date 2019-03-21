@@ -6,72 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>周末</title>
     <link rel="icon" href="../images4/头像.jpg">
-    <link rel="stylesheet" href="../css/css8.css">
+    <link rel="stylesheet" href="../csss/css8.css">
 </head>
 
 <body>
-    <div id="pic">
-        <img src="../images4/金山寺1.jpeg" alt=""> 
-        <ul>
-        </ul>
-
+        <div class="container">
+            <div class="content">
+                <span>金山寺</span>
+                <p>
+                金山寺雄踞于镇江市区西北，
+                     属国家5A级风景区。金山寺始建于东晋，是中国佛教诵经设斋、礼佛拜忏和追荐亡灵的水陆法会的发源地。
+                    金山原为扬子江中一个岛屿，由于"大江曲流"，至清光绪末年（1903年）左右与陆地连成一片。金山
+                    景点甚多，充满历史传说与神话故事，古人赞为"江南名胜之最"。
+                金山寺庙依山而造，殿宇厅堂
+                幢幢相衔，亭台楼阁层层相接。慈寿塔耸立
+                于金山之巅，拔地而起，突兀云天。从山麓到山顶，一
+                层层殿阁，一座座楼台，将金山密集地包裹起来，山与寺浑
+                然一体。整个金山仿佛就是一座宏伟壮丽的寺庙，构成一组橼摩
+                栋接、丹辉碧映的古建筑群，形成了一种金碧辉煌“寺裹山”奇特风格
+                。北京万寿山的佛香阁、承德避暑山庄“天宇咸畅”
+                的金山亭、扬州瘦西湖中的小金山等，都汲取了金山寺的建筑特色。</p></div>
+        <div id="pic">
+            
+            <img src="../images4/金山寺1.jpeg" alt=""> 
+        </div>
     </div>
-    <script>
-        var pic = document.getElementById('pic');
-        var imgs = pic.getElementsByTagName('img')[0];
-        var lis = pic.getElementsByTagName('li')[0];
-        var uls = pic.getElementsByTagName('ul')[0];
-        var lis = uls.getElementsByTagName('li');
-        //找到页面中的li元素,li元素是往里面塞进去的
-        // 准备数据
-        var arrUrl = ['../images4/金山寺1.jpeg','../images4/外出.jpeg','../images4/白蛇.jpeg','../images4/金山寺2.jpeg'];
-        var num = 0;
-        //有数组的地方一般都有数字，因为图片地址配合数字就能找到文字描述
-
-        // -----------------------添加定时器--------------------------------------------
-        var timer = null;//设置定时器开关
-        function autoPlay() {//定时器用函数包围起来
-            timer = setInterval(function () {
-                num++;//数值加1
-                num %= arrUrl.length;//以数组长度来循环切换
-                fnTab();
-            }, 1500);
-        }
-        //autoPlay();//函数直接调用，打开页面就开始轮播；(这行与下一行只能存在一个)
-        setTimeout(autoPlay, 800);//打开页面1秒钟之后再开始轮播
-        // 鼠标移入图片上面，让定时器关闭；
-        pic.onmouseover = function () {
-            clearInterval(timer);
-        };
-        // 鼠标移出图片定时器开启
-        pic.onmouseout = autoPlay;//autoPlay后面不能添加括号
-
-        // ----------------------定时器结束--------------------------------------------
-
-        // 插入li标签
-        for (var i = 0; i < arrUrl.length; i++) {
-            uls.innerHTML += '<li></li>';//往Ul里添加li就要写成+=，如果是改写就直接写成等号 
-        }
-
-        // 初始化，要先插入标签再初始化，顺序不要颠倒，否则会出错
-        function fnTab() {
-            imgs.src = arrUrl[num];//显示第一张图片
-            for (var i = 0; i < lis.length; i++) {
-                lis[i].className = '';
+        <script>
+            var pic = document.getElementById('pic');
+            var imgs = pic.getElementsByTagName('img')[0];
+            // 准备数据
+            var arrUrl = ['../images4/金山寺1.jpeg','../images4/下载.jpg','../images4/外出.jpeg','../images4/金山寺2.jpeg','../images4/白蛇.jpeg'];
+            var num = 0;
+            //有数组的地方一般都有数字，因为图片地址配合数字就能找到文字描述
+    
+            // -----------------------添加定时器--------------------------------------------
+            var timer = null;//设置定时器开关
+            function autoPlay() {//定时器用函数包围起来
+                timer = setInterval(function () {
+                    num++;//数值加1
+                    num %= arrUrl.length;//以数组长度来循环切换
+                    fnTab();
+                }, 2000);
             }
-            lis[num].className = 'active';//给当前的li添加类名  
-        }
-        fnTab();
-
-        // 给li添加点击事件，循环li
-        for (var i = 0; i < lis.length; i++) {
-            lis[i].index = i;//自定义属性又叫索引值
-            lis[i].onclick = function () {
-                num = this.index;
-                fnTab();
+            //函数直接调用，打开页面就开始轮播;
+            setTimeout(autoPlay);//打开页面1秒钟之后再开始轮播
+            pic.onmouseover = function () {// 鼠标移入图片上面，让定时器关闭；
+                clearInterval(timer);
             };
-        }
-
+            pic.onmouseout = autoPlay; // 鼠标移出图片定时器开启;//autoPlay后面不能添加括号
+    
+            // ----------------------定时器结束--------------------------------------------
+    
+            function fnTab() {
+                imgs.src = arrUrl[num];//显示第一张图片
+                for (var i = 0; i < arrUrl.length; i++) {
+                    arrUrl[i].className = '';
+                }
+                arrUrl[num].className = 'active';//给当前的li添加类名  
+            }
+        </script>
+    </body>
+    
     </script>
 </body>
 

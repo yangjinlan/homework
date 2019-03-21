@@ -6,23 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>南京之行</title>
     <link rel="icon" href="../images4/头像.jpg">
-    <link rel="stylesheet" href="../css/css7.css">
+    <link rel="stylesheet" href="../csss/css7.css">
 </head>
 
 <body>
+    <div class="container">
+    <div class="picture">
+        <img src="../images4/小人推送.jpg" alt="">
+    </div>
+    <div class="state">
+        <p class="tip">南京纪念馆:</p>
+        <p class="t">为真相而战斗的80年风雨路,这段历史</p>
+         <p class="i">的伤痛应该被永远铭记！</p>
+         <p class="museum">南京博物院:</p>
+         <p class="qing">青铜、玉石、陶瓷、金银器皿、竹木牙角、漆器、</p>
+        <p class="si">丝织刺绣、书画、印玺、碑刻造像等文物品类一</p>
+            <p class="ying">应俱有，每一品种又自成历史系列，成为数千</p>
+                <p class="nian">年中华文明历史发展最为直接的见证。</p>
+        
+    </div>
     <div id="pic">
         <img src="../images4/和平.jpg" alt=""> 
-        <ul>
-        </ul>
-
     </div>
+</div>
     <script>
         var pic = document.getElementById('pic');
         var imgs = pic.getElementsByTagName('img')[0];
-        var lis = pic.getElementsByTagName('li')[0];
-        var uls = pic.getElementsByTagName('ul')[0];
-        var lis = uls.getElementsByTagName('li');
-        //找到页面中的li元素,li元素是往里面塞进去的
         // 准备数据
         var arrUrl = ['../images4/和平.jpg','../images4/博物馆.jpeg','../images4/博物馆建筑.jpeg', '../images4/金凤冠.jpeg', '../images4/羊骨.jpeg','../images4/绿瓷.jpeg', '../images4/瓷瓶.jpeg'];
         var num = 0;
@@ -35,43 +44,24 @@
                 num++;//数值加1
                 num %= arrUrl.length;//以数组长度来循环切换
                 fnTab();
-            }, 1000);
+            }, 2000);
         }
-        //autoPlay();//函数直接调用，打开页面就开始轮播；(这行与下一行只能存在一个)
-        setTimeout(autoPlay, 1000);//打开页面1秒钟之后再开始轮播
-        // 鼠标移入图片上面，让定时器关闭；
-        pic.onmouseover = function () {
+        //函数直接调用，打开页面就开始轮播;
+        setTimeout(autoPlay);//打开页面1秒钟之后再开始轮播
+        pic.onmouseover = function () {// 鼠标移入图片上面，让定时器关闭；
             clearInterval(timer);
         };
-        // 鼠标移出图片定时器开启
-        pic.onmouseout = autoPlay;//autoPlay后面不能添加括号
+        pic.onmouseout = autoPlay; // 鼠标移出图片定时器开启;//autoPlay后面不能添加括号
 
         // ----------------------定时器结束--------------------------------------------
 
-        // 插入li标签
-        for (var i = 0; i < arrUrl.length; i++) {
-            uls.innerHTML += '<li></li>';//往Ul里添加li就要写成+=，如果是改写就直接写成等号 
-        }
-
-        // 初始化，要先插入标签再初始化，顺序不要颠倒，否则会出错
         function fnTab() {
             imgs.src = arrUrl[num];//显示第一张图片
-            for (var i = 0; i < lis.length; i++) {
-                lis[i].className = '';
+            for (var i = 0; i < arrUrl.length; i++) {
+                arrUrl[i].className = '';
             }
-            lis[num].className = 'active';//给当前的li添加类名  
+            arrUrl[num].className = 'active';//给当前的li添加类名  
         }
-        fnTab();
-
-        // 给li添加点击事件，循环li
-        for (var i = 0; i < lis.length; i++) {
-            lis[i].index = i;//自定义属性又叫索引值
-            lis[i].onclick = function () {
-                num = this.index;
-                fnTab();
-            };
-        }
-
     </script>
 </body>
 

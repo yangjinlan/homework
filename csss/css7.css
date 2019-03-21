@@ -1,0 +1,61 @@
+*{margin:0;padding: 0}
+body {background-color: #e9dfe5;}
+.container{
+    position: relative;
+    width: 100%;
+}
+.picture{
+    position: absolute;
+    width: 354px;
+    height: 321px;
+    margin-top: 150px;
+}
+.state{
+    position: absolute;
+    width: 354px;
+    height: 321px;
+    margin-top: 150px;
+    background-color:#e6cde3;
+    margin-left: 350px; 
+    border-radius: 50%;
+}
+.state .tip{
+    font-size: 25px;
+    margin-left: 80px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.museum{
+    font-size: 25px;
+    margin-left: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.t{
+    margin-left: 40px; 
+}
+.i{
+    margin-left: 25px;
+}
+.qing{
+    margin-left: 2px;
+}
+.si{
+    margin-left: 5px;
+}
+.ying{
+    margin-left: 13px;
+}
+.nian{
+    margin-left: 19px;
+}
+#pic {
+     width: 600px;
+     position: absolute;
+     margin-left: 800px;
+     top: 40px;
+}
+#pic img {
+    width: 600px;
+    height: 650px;
+}
